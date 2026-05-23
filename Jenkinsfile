@@ -26,6 +26,12 @@ pipeline{
             }
         }
 
+        stage("Remove old Docker Image") {
+            steps {
+                bat 'docker rm -f node-jenkins-container'
+            }
+        }
+
         stage("Run Docker Container") {
             steps {
                 bat 'docker run -d -p 3000:3000 --name node-jenkins-container  node-jenkins-image'
