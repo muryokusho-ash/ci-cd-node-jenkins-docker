@@ -2,9 +2,9 @@ console.log("===========================================");
 console.log("Testing...");
 console.log("===========================================");
 
-const add = require("./app");
+const multiply = require("./app");
 
-if (add(2, 3) === 5) {
+if (multiply(2, 3) === 2*3) {
   console.log("Test Sucessfull");
   process.exit(0);
 } else {
